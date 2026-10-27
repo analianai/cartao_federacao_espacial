@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6418ed">
+  <title>Cartão — Federação Espacial | ID de Cadete</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topo">
+      <div>
+        <h1>🚀 ID de Cadete</h1>
+        <p>Preencha os dados, adicione uma foto e gere o cartão para imprimir.</p>
+      </div>
+      <button id="instalarBtn" class="secundario escondido" type="button">Instalar no computador</button>
+    </header>
+
+    <section class="painel" aria-label="Dados do cadete">
+      <form id="formCartao">
+        <div class="campo">
+          <label for="nome">Nome do cadete</label>
+          <input id="nome" name="nome" type="text" maxlength="38" placeholder="Digite o nome" required>
+        </div>
+        <div class="campo">
+          <label for="idade">Idade</label>
+          <input id="idade" name="idade" type="text" maxlength="3" inputmode="numeric" placeholder="Ex.: 12" required>
+        </div>
+        <div class="campo">
+          <label for="jogo">Jogo favorito</label>
+          <input id="jogo" name="jogo" type="text" maxlength="32" placeholder="Digite o jogo favorito" required>
+        </div>
+        <div class="campo">
+          <label for="foto">Foto do cadete</label>
+          <input id="foto" name="foto" type="file" accept="image/*">
+          <small>Escolha uma foto JPG, PNG ou outra imagem compatível.</small>
+        </div>
+        <div class="botoes">
+          <button class="primario" type="submit">Atualizar cartão</button>
+          <button class="primario" id="pdfBtn" type="button">Imprimir / Salvar em PDF</button>
+          <button class="secundario" id="limparBtn" type="button">Limpar dados</button>
+        </div>
+        <p class="aviso">Dica: na janela de impressão, selecione “Salvar como PDF” para guardar o arquivo ou escolha sua impressora.</p>
+      </form>
+    </section>
+
+    <section class="visualizacao">
+      <div class="titulo-preview">
+        <h2>Pré-visualização</h2>
+        <span>O cartão abaixo será impresso.</span>
+      </div>
+      <div id="cartao" class="cartao" aria-label="Pré-visualização do cartão de identificação">
+        <img class="fundo" src="assets/modelo-cartao.jpg" alt="">
+        <div id="textoNome" class="texto texto-nome"></div>
+        <div id="textoIdade" class="texto texto-idade"></div>
+        <div id="textoJogo" class="texto texto-jogo"></div>
+        <div class="foto-janela">
+          <img id="fotoPreview" alt="Foto do cadete">
+          <span id="fotoPlaceholder">SUA<br>FOTO</span>
+        </div>
+      </div>
+    </section>
+    <footer>Feito para uso educativo • Os dados ficam neste navegador e não são enviados para um servidor.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

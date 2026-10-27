@@ -1,0 +1,10 @@
+{
+  "name": "Cartão de Identificação — Federação Espacial",
+  "short_name": "ID de Cadete",
+  "description": "Crie e imprima um cartão de identificação de cadete.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f3fa",
+  "theme_color": "#6418ed",
+  "icons": []
+}
