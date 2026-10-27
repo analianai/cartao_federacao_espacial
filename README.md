@@ -1,4 +1,3 @@
-# cartao_federacao_espacial
 # 🚀 Federação Espacial — ID de Cadete
 
 Projeto web para criar cartões de identificação personalizados para cadetes da Federação Espacial.
